@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Music Near Me",
+    "description": "A mobile app that will send you notifications.",
+    "date_created": "2021-04-26",
+    "user_id": "1"
+  },
+  {
+    "title": "The Ultimate Tech Quiz",
+    "description": "A web app that will give users 10 new technical!",
+    "date_created": "2021-04-26",
+    "user_id": "2"
+  },
+  {
+    "title": "Roll 'Em Up",
+    "description": "A game for Windows and macOS where players.",
+    "date_created": "2021-04-26",
+    "user_id": "3"
+  }
+]
