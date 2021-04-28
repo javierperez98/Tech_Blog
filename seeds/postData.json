@@ -1,17 +1,17 @@
 [
 	{
-		"title": "Music Near Me",
-		"description": "A mobile app that will send you notifications.",
+		"title": "I love Javascript",
+		"description": "Javascript is my favorite language",
 		"date_created": "04-20-2021"
 	},
 	{
-		"title": "The Ultimate Tech Quiz",
-		"description": "A web app that will give users 10 new technical!",
+		"title": "MYSQL",
+		"description": "Im learning how to code the back end and so far I really enjoy it.",
 		"date_created": "02-06-2021"
 	},
 	{
-		"title": "Roll 'Em Up",
-		"description": "A game for Windows and macOS where players.",
+		"title": "CSS Frameworks",
+		"description": "Bootstrap makes designing webpages super easy.",
 		"date_created": "01-18-2021"
 	}
 ]
