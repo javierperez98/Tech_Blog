@@ -17,15 +17,18 @@
                 <li class="nav-item p-3">
                     <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item p-3">
-                    <a class="nav-link" href="/profile">Dashboard</a>
-                </li>
-                <li class="nav-item p-3">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
+                {{#if logged_in}}
                 <li class="nav-item p-3">
                     <a class="nav-link" href="#">Logout</a>
                 </li>
+                <li class="nav-item p-3">
+                    <a class="nav-link" href="/profile">Dashboard</a>
+                </li>
+                {{else}}
+                <li class="nav-item p-3">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                {{/if}}
             </ul>
             <h2 class="mx-3 px-3 rounded-lg text-dark bg-white">The Tech Blog</h2>
         </nav>
@@ -33,6 +36,10 @@
     <main class="d-flex flex-column justify-content-center col-12">
         {{{body}}}
     </main>
+
+    {{#if logged_in}}
+    <script src="logout.js"></script>
+    {{/if}}
 </body>
 
 </html>

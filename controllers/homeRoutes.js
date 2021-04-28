@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
 		const posts = postData.map((post) => post.get({ plain: true }));
 		res.render("homepage", {
 			posts,
+			logged_in: req.session.logged_in,
 		});
 	} catch (err) {
 		res.status(500).json(err);
@@ -38,7 +39,9 @@ router.get("/signup", (req, res) => {
 
 router.get("/profile", (req, res) => {
 	try {
-		res.render("dashboard");
+		res.render("dashboard", {
+			logged_in: req.session.logged_in,
+		});
 	} catch (err) {
 		res.status(500).json(err);
 	}
