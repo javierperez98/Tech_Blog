@@ -1,12 +1,14 @@
 <section class="col-12 px-5">
-    <div class="card">
+    {{#each posts as |post|}}
+    <div class="card mb-1">
         <div class="card-header d-flex flex-row justify-content-between align-items-center">
             <a href="/edit" class="text-decoration-none text-dark">
-                <h3 class="m-0">This is a Title</h3>
+                <h3 class="m-0">{{post.title}}</h3>
             </a>
-            <h6 class="m-0">4/26/2021</h6>
+            <h6 class="m-0">{{format_date post.date_created}}</h6>
         </div>
     </div>
+    {{/each}}
 </section>
 <div class="d-flex flex-row justify-content-center col-12 my-4">
     <a href="/create" class="btn btn-primary col-2">
