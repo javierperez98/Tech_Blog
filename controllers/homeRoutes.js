@@ -42,6 +42,16 @@ router.get("/signup", (req, res) => {
 	}
 });
 
+router.get("/create", (req, res) => {
+	try {
+		res.render("createpost", {
+			logged_in: req.session.logged_in,
+		});
+	} catch (err) {
+		res.status(500).json(err);
+	}
+});
+
 router.get("/profile", withAuth, async (req, res) => {
 	try {
 		// Find the logged in user based on the session ID
@@ -49,9 +59,7 @@ router.get("/profile", withAuth, async (req, res) => {
 			attributes: { exclude: ["password"] },
 			include: [{ model: Posts }],
 		});
-
 		const user = userData.get({ plain: true });
-
 		res.render("dashboard", {
 			...user,
 			logged_in: true,
@@ -61,17 +69,24 @@ router.get("/profile", withAuth, async (req, res) => {
 	}
 });
 
-router.get("/create", (req, res) => {
+router.get("/posts/:id", withAuth, async (req, res) => {
 	try {
-		res.render("createpost");
-	} catch (err) {
-		res.status(500).json(err);
-	}
-});
+		const postData = await Posts.findOne({
+			where: {
+				id: req.params.id,
+				user_id: req.session.user_id,
+			},
+		});
 
-router.get("/edit", (req, res) => {
-	try {
-		res.render("editpost");
+		if (!postData) {
+			res.status(404).json({ message: "No project found with this id!" });
+			return;
+		}
+		const post = postData.get({ plain: true });
+		res.render("editpost", {
+			post,
+			logged_in: req.session.logged_in,
+		});
 	} catch (err) {
 		res.status(500).json(err);
 	}

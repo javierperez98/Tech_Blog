@@ -4,11 +4,11 @@
         <div class="card-body">
             <div class="form-group">
                 <label for="newpost-title">Title</label>
-                <input type="text" class="form-control" id="newpost-title" />
+                <input type="text" class="form-control" id="newpost-title" value="{{post.title}}" />
             </div>
             <div class="form-group">
                 <label for="newpost-dis">Content</label>
-                <input type="text" class="form-control" id="newpost-dis" />
+                <input type="text" class="form-control" id="newpost-dis" value="{{post.description}}" />
             </div>
             <button type="submit" class="btn btn-primary">Update Post</button>
             <button type="delete" class="btn btn-primary">Delete Post</button>
