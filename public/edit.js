@@ -1,13 +1,14 @@
 const editPostHandler = async (event) => {
 	event.preventDefault();
 
-	const name = document.querySelector("#edit-title").value.trim();
+	const title = document.querySelector("#edit-title").value.trim();
+	const id = document.querySelector("#edit-title");
 	const description = document.querySelector("#edit-des").value.trim();
 
-	if (name && description) {
-		const response = await fetch("/api/posts", {
+	if (title && description) {
+		const response = await fetch("/api/posts/" + id.dataset.id, {
 			method: "PUT",
-			body: JSON.stringify({ name, description }),
+			body: JSON.stringify({ title, description }),
 			headers: {
 				"Content-Type": "application/json",
 			},
