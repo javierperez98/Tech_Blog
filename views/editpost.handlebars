@@ -1,17 +1,17 @@
 <section class="col-12 px-5">
-    <form class="card">
+    <form class="card edit-post">
         <h3 class="card-header">Edit Post</h3>
         <div class="card-body">
             <div class="form-group">
-                <label for="newpost-title">Title</label>
-                <input type="text" class="form-control" id="newpost-title" value="{{post.title}}" />
+                <label for="edit-title">Title</label>
+                <input type="text" class="form-control" id="edit-title" value="{{post.title}}" />
             </div>
             <div class="form-group">
-                <label for="newpost-dis">Content</label>
-                <input type="text" class="form-control" id="newpost-dis" value="{{post.description}}" />
+                <label for="edit-des">Content</label>
+                <input type="text" class="form-control" id="edit-des" value="{{post.description}}" />
             </div>
             <button type="submit" class="btn btn-primary">Update Post</button>
-            <button type="submit" class="btn btn-primary">Delete Post</button>
+            <button type="delete" class="btn btn-primary">Delete Post</button>
         </div>
     </form>
 </section>
