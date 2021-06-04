@@ -1,6 +1,19 @@
 # Tech_Blog
 
-![MIT](https://img.shields.io/github/license/microsoft/vscode)
+<p align="center">
+    <img src="https://img.shields.io/github/repo-size/javierperez98/Tech_Blog" />
+    <img src="https://img.shields.io/github/languages/top/javierperez98/Tech_Blog"  />
+    <img src="https://img.shields.io/github/last-commit/javierperez98/Tech_Blog" >
+    <a href="https://github.com/javierperez98"><img src="https://img.shields.io/github/followers/javierperez98?style=social" target="_blank" /></a>
+</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/database-MYSQL-blue" />
+    <img src="https://img.shields.io/badge/language-Node.js-green" />
+    <img src="https://img.shields.io/badge/license-MIT-blue" />
+    <img src="https://img.shields.io/tokei/lines/github/javierperez98/Tech_Blog" />
+</p>
+
+<a href="https://tech-blog-jp.herokuapp.com/"><h1 align="center">Deployed Webpage</h1></a>
 
 ## Description
 
@@ -22,22 +35,27 @@ create, view, update and delete blog posts.
 
 <!-- What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. -->
 
-- To install copy and paste either the SSH or HTTPS key and run it in either Bash (PC Users) or Terminal (MAC Users) using the git clone command.
+To install copy and paste either the SSH or HTTPS key and run it in either Bash (PC Users) or Terminal (MAC Users) using the git clone command.
+
+- SSH key:
 
 ```md
-SSH key: git clone git@github.com:javierperez98/Tech_Blog.git
-HTTPS key : git clone https://github.com/javierperez98/Tech_Blog.git
+git clone git@github.com:javierperez98/Tech_Blog.git
 ```
 
-- Next you'll have to install all the required node modules by opening the index.js file using terminal/bash and typing in the following command.
+- HTTPS key:
+
+```md
+git clone https://github.com/javierperez98/Tech_Blog.git
+```
+
+Next you'll have to install all the required node modules by opening the index.js file using terminal/bash and typing in the following command.
 
 ```md
 npm i
 or
 npm install
-and
-npm run seed
-and
+and then
 npm start
 ```
 
